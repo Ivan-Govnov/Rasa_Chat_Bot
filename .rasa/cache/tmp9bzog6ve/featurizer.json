@@ -1,0 +1,62 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "ask_help": 0,
+        "ask_time": 1,
+        "ask_weather": 2,
+        "back": 3,
+        "bot_challenge": 4,
+        "goodbye": 5,
+        "greeting": 6,
+        "joke": 7,
+        "math_operation": 8,
+        "nlu_fallback": 9,
+        "out_of_scope": 10,
+        "restart": 11,
+        "search": 12,
+        "session_start": 13
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_greet": 13,
+        "action_tell_time": 14,
+        "action_get_weather": 15,
+        "action_handle_math": 16,
+        "action_search": 17,
+        "action_tell_joke": 18,
+        "action_analyze_sentiment": 19,
+        "action_log": 20,
+        "utter_goodbye": 21,
+        "utter_greeting": 22,
+        "utter_help": 23,
+        "utter_iamabot": 24,
+        "utter_time": 25
+      },
+      "entities": {
+        "city": 0
+      },
+      "slots": {
+        "city_0": 0
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

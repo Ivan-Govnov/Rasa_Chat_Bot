@@ -1,0 +1,39 @@
+recipe: default.v1
+language: ru
+
+pipeline:
+  - name: SpacyNLP
+    model: "ru_core_news_lg"
+    case_sensitive: false
+  - name: SpacyTokenizer
+  - name: SpacyEntityExtractor
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+    features:
+      - ["low", "title", "upper"]
+      - ["low", "prefix5", "suffix5", "digit"]
+      - ["low", "prefix2", "suffix3"]
+  - name: CountVectorsFeaturizer
+    analyzer: "char_wb"
+    min_ngram: 1
+    max_ngram: 4
+    token_pattern: r'(?u)\b\w\w+\b'
+  - name: DIETClassifier
+    epochs: 200
+    constrain_similarities: true
+    hidden_layers_sizes:
+      text: [256, 128]
+    embedding_dimension: 50
+    number_of_transformer_layers: 1
+
+policies:
+  - name: MemoizationPolicy
+    max_history: 5
+  - name: RulePolicy
+    core_fallback_threshold: 0.4
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100
+    constrain_similarities: true
+    batch_size: [32, 64]
+assistant_id: 20250528-035835-oily-median

@@ -1,0 +1,62 @@
+version: "3.1"
+
+stories:
+- story: greet and goodbye
+  steps:
+    - intent: greeting
+    - action: utter_greeting
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: weather
+  steps:
+    - intent: ask_weather
+    - action: weather_form
+    - active_loop: weather_form
+
+- story: math
+  steps:
+    - intent: math_operation
+    - action: action_calculate
+
+- story: time
+  steps:
+    - intent: ask_time
+    - action: action_get_time
+
+- story: tell joke
+  steps:
+    - intent: joke
+    - action: action_tell_joke
+
+- story: search something
+  steps:
+    - intent: search
+    - action: action_search
+
+- story: music discussion
+  steps:
+    - intent: discuss_music
+    - action: utter_music
+
+- story: games discussion
+  steps:
+    - intent: discuss_games
+    - action: utter_games
+
+- story: complex greeting with name and mood
+  steps:
+    - intent: greeting
+    - action: utter_greeting
+    - intent: inform_name
+    - action: action_store_name
+    - action: utter_greet_personal
+    - intent: express_mood
+    - action: action_analyze_sentiment
+
+- story: Handle mood and joke request
+  steps:
+    - intent: express_mood
+    - action: action_analyze_sentiment
+    - intent: request_joke
+    - action: action_tell_joke

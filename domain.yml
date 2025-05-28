@@ -1,0 +1,94 @@
+version: "3.1"
+
+intents:
+  - greeting
+  - ask_time
+  - ask_weather
+  - math_operation
+  - search
+  - joke
+  - ask_help
+  - goodbye
+  - bot_challenge
+  - inform_name
+  - express_mood
+  - complex_greeting
+  - discuss_music
+  - discuss_games
+
+entities:
+  - city
+  - PER
+
+slots:
+  city:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: city
+  user_name:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: PER
+  mood:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_intent
+        intent: express_mood
+        value: mood
+  current_topic:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: custom
+
+responses:
+  utter_greeting:
+    - text: "Привет! Я ваш виртуальный помощник. Чем могу помочь?"
+  utter_goodbye:
+    - text: "До свидания! 😊"
+  utter_time:
+    - text: "Секунду..."
+  utter_help:
+    - text: |
+        Я умею:
+        - Показывать погоду
+        - Выполнять математические операции
+        - Искать информацию
+        - Рассказывать шутки
+        - Обсуждать музыку и игры
+        - Сохранять ваше имя
+        - Анализировать настроение
+  utter_iamabot:
+    - text: "Да, я бот. Но я постараюсь помочь вам как настоящий помощник!"
+  utter_default:
+    - text: "Извините, я не понял. Можете переформулировать?"
+  utter_music:
+    - text: "Музыка — это прекрасно! Какой жанр вам интересен?"
+  utter_games:
+    - text: "Игры — это увлекательно! Во что вы любите играть?"
+  utter_greet_personal:
+    - text: "Рад вас видеть снова! Чем могу помочь?"
+
+actions:
+  - action_greet
+  - action_goodbye
+  - action_search
+  - action_handle_complex_message
+  - action_calculate
+  - action_tell_joke
+  - action_store_name
+  - action_analyze_sentiment
+  - action_get_time
+  - action_get_weather
+  - action_detect_topics
+  - action_log
+
+forms:
+  weather_form:
+    required_slots:
+      - city

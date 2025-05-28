@@ -1,0 +1,10 @@
+{
+  "0": "ask_help",
+  "1": "ask_time",
+  "2": "ask_weather",
+  "3": "goodbye",
+  "4": "greeting",
+  "5": "joke",
+  "6": "math_operation",
+  "7": "search"
+}

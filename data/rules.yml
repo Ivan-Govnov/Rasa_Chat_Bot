@@ -1,0 +1,77 @@
+version: "3.1"
+
+rules:
+- rule: Respond to goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: Respond to bot challenge
+  steps:
+    - intent: bot_challenge
+    - action: utter_iamabot
+
+- rule: Respond to help request
+  steps:
+    - intent: ask_help
+    - action: utter_help
+
+- rule: Handle complex greeting
+  steps:
+    - intent: complex_greeting
+    - action: action_handle_complex_message
+
+- rule: Fallback rule
+  steps:
+    - intent: nlu_fallback
+    - action: utter_default
+
+- rule: Respond to joke request
+  steps:
+    - intent: joke
+    - action: action_tell_joke
+
+- rule: Handle search request
+  steps:
+    - intent: search
+    - action: action_search
+
+- rule: Handle time request
+  steps:
+    - intent: ask_time
+    - action: action_get_time
+
+- rule: Handle music request
+  steps:
+    - intent: discuss_music
+    - action: utter_music
+
+- rule: Handle games request
+  steps:
+    - intent: discuss_games
+    - action: utter_games
+
+- rule: Store user name
+  steps:
+    - intent: inform_name
+    - action: action_store_name
+    - action: utter_greet_personal
+
+- rule: Handle express mood
+  steps:
+    - intent: express_mood
+    - action: action_analyze_sentiment
+
+- rule: Activate weather form
+  steps:
+    - intent: ask_weather
+    - action: weather_form
+    - active_loop: weather_form
+
+- rule: Submit weather form
+  condition:
+    - active_loop: weather_form
+  steps:
+    - action: weather_form
+    - active_loop: null
+    - action: action_get_weather

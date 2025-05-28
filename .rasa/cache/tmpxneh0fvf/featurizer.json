@@ -1,0 +1,80 @@
+{
+  "type": "MaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "ask_help": 0,
+        "ask_time": 1,
+        "ask_weather": 2,
+        "back": 3,
+        "bot_challenge": 4,
+        "complex_greeting": 5,
+        "discuss_games": 6,
+        "discuss_music": 7,
+        "express_mood": 8,
+        "goodbye": 9,
+        "greeting": 10,
+        "inform_name": 11,
+        "joke": 12,
+        "math_operation": 13,
+        "nlu_fallback": 14,
+        "out_of_scope": 15,
+        "restart": 16,
+        "search": 17,
+        "session_start": 18
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_greet": 13,
+        "action_goodbye": 14,
+        "action_search": 15,
+        "action_handle_complex_message": 16,
+        "action_calculate": 17,
+        "action_tell_joke": 18,
+        "action_store_name": 19,
+        "action_analyze_sentiment": 20,
+        "action_get_time": 21,
+        "action_get_weather": 22,
+        "action_detect_topics": 23,
+        "action_log": 24,
+        "utter_default": 25,
+        "utter_games": 26,
+        "utter_goodbye": 27,
+        "utter_greet_personal": 28,
+        "utter_greeting": 29,
+        "utter_help": 30,
+        "utter_iamabot": 31,
+        "utter_music": 32,
+        "utter_time": 33,
+        "weather_form": 34
+      },
+      "entities": {
+        "PER": 0,
+        "city": 1
+      },
+      "slots": {
+        "city_0": 0,
+        "current_topic_0": 1
+      },
+      "active_loop": {
+        "weather_form": 0
+      }
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

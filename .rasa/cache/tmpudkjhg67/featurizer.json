@@ -1,0 +1,78 @@
+{
+  "type": "MaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "ask_help": 0,
+        "ask_time": 1,
+        "ask_weather": 2,
+        "back": 3,
+        "bot_challenge": 4,
+        "complex_greeting": 5,
+        "express_mood": 6,
+        "goodbye": 7,
+        "greeting": 8,
+        "inform_name": 9,
+        "joke": 10,
+        "math_operation": 11,
+        "nlu_fallback": 12,
+        "out_of_scope": 13,
+        "restart": 14,
+        "search": 15,
+        "session_start": 16
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_store_name": 13,
+        "action_detect_topics": 14,
+        "action_greet": 15,
+        "action_tell_time": 16,
+        "action_get_weather": 17,
+        "action_handle_math": 18,
+        "action_search": 19,
+        "action_tell_joke": 20,
+        "action_analyze_sentiment": 21,
+        "action_log": 22,
+        "action_handle_complex_message": 23,
+        "utter_ask_name": 24,
+        "utter_default": 25,
+        "utter_games": 26,
+        "utter_goodbye": 27,
+        "utter_greet_personal": 28,
+        "utter_greeting": 29,
+        "utter_help": 30,
+        "utter_iamabot": 31,
+        "utter_mood_response": 32,
+        "utter_music": 33,
+        "utter_time": 34
+      },
+      "entities": {
+        "LOC": 0,
+        "PER": 1,
+        "city": 2,
+        "game": 3
+      },
+      "slots": {
+        "city_0": 0,
+        "current_topic_0": 1
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

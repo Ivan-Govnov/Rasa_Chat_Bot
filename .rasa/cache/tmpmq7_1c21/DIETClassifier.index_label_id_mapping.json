@@ -1,0 +1,17 @@
+{
+  "0": "ask_help",
+  "1": "ask_time",
+  "2": "ask_weather",
+  "3": "bot_challenge",
+  "4": "complex_greeting",
+  "5": "discuss_games",
+  "6": "discuss_music",
+  "7": "express_mood",
+  "8": "goodbye",
+  "9": "greeting",
+  "10": "inform_name",
+  "11": "joke",
+  "12": "math_operation",
+  "13": "request_joke",
+  "14": "search"
+}
